@@ -1,0 +1,275 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Brawler:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Graduate&family=Notable&family=Protest+Riot&display=swap');
+
+:root {
+  --clr-maize: rgb(255, 213, 0);
+  --clr-blue: rgb(0, 37, 64);
+  --clr-scarlet: rgb(159, 3, 0);
+  --clr-grey: rgb(148, 147, 147);
+
+  --ff-primary: "Cinzel Decorative", serif;
+  --ff-accent: "Graduate", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-primary);
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1, h2 {
+  font-family: var(--ff-accent);
+  font-weight: bolder;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+h2, p {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.text-center {
+  text-align: center;
+  
+}
+
+header, section {
+  padding: 3rem 0;
+}
+
+header h1 {
+  color:white;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.container--narrow {
+  max-width: 35rem;
+  color:white;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rotate-card  {
+  display: flex;
+  max-width: 100%;
+  width:100%;
+}
+
+.me {
+  max-width: 100%;
+  width:100%;
+  float: right;
+  
+  
+}
+
+.rotate-card {
+  width: 10em; /* Adjust card width as needed */
+  height: 15em; /* Adjust card height as needed */
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.rotate-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  animation: rotateAnimation 5s ease-in-out infinite; /* Apply rotation animation */
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate3d(-1, 4, 1, 0deg); /* Start with no rotation */
+  }
+  50% {
+    transform: rotate3d(-1, 4, 1, 180deg); /* Rotate halfway */
+  }
+  100% {
+    transform: rotate3d(-1, 4, 1, 360deg);
+}
+}
+
+.rotate-card-front, .rotate-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back side initially */
+}
+
+.rotate-card-back {
+  transform: rotate3d(0, 1, 0, 180deg); /* Initially flipped to show back side */
+}
+
+.rotate-card img {
+  width: 100%;
+  height:100%;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 40em) {
+  header, section {
+    padding: 7rem 0;
+  }
+
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.bg-maize {
+  background: var(--clr-maize);
+}
+
+.bg-blue {
+  background: var(--clr-blue);
+  color: var(--clr-maize);
+  font-family: var(--ff-accent);
+}
+
+.bg-scarlet {
+  background: var(--clr-grey);
+}
+
+.bg-grey {
+  background: var(--clr-scarlet);
+  color: var(--clr-grey);
+  font-family: var(--ff-accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.split-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.split-item img {
+  margin-bottom: 1em;
+}
+
+.split-item p {
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  font-family: "Aboreto", system-ui;
+  color: var(--clr-blue);
+  font-size: 0.7em;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--clr-blue);
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.split-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.mich {
+  background: var(--clr-blue);
+  border: 1px solid var(--clr-blue);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+  max-width: 45%;
+  min-width: 300px;
+}
+
+.split-item h2 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.split-item:nth-child(2) h2 {
+  color: var(--clr-secondary);
+}
+
+.split-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
