@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Page</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-
+<div class="contact getAhold">
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -15,10 +16,24 @@
       <li><a href="schedule.html">Schedules</a></li> 
     </ul>
   </nav>
-  <header>
-    <h1 style="font-family: 'Brawler', serif;">Contact Me</h1>
-    
-  </header>
-  <a href="mailto:hawnbones0402@gmail.com">Email:Sean J</a>
+</div>
+<div class="getAhold">
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-left-title">
+        <h2>Contact Me</h2>
+        <hr>
+      </div>
+      <input type="hidden" name="access_key" value="f8f8463b-2c85-4fa2-9d84-c6d7bebf8900">
+      <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+      <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+      <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+</div>
+  
+  
+  
 </body>
 </html>
